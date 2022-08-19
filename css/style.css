@@ -1,0 +1,13 @@
+.imgStyle{
+    width: 16.8rem;
+    margin-top: 21.5px;
+}
+
+.row{
+    column-gap: 21.5px;  
+}
+
+.imgHide{
+    display: none;
+}
+
