@@ -9,16 +9,19 @@ myBtn.addEventListener('click',()=>{
       fetch('https://jsonplaceholder.typicode.com/photos')
         .then( res => res.json())
         .then( data =>{
-        // console.log(data.thumbnailUrl);
+        // console.log(data);
         data.forEach(element => {
-        // console.log(element.thumbnailUrl);
-        let myRow = document.querySelector('.row')
-        let myDive = document.createElement('div');
-        myDive.setAttribute('class' , 'col-lg-3 col-md-6 col-sm-12 imgStyle text-center')
-        let myImg = document.createElement('img');
-        myImg.setAttribute('src' , element.thumbnailUrl);
-        myDive.appendChild(myImg);
-        myRow.appendChild(myDive)
+          // console.log(element.id);
+          if (element.id < 100) {
+                // console.log(element.thumbnailUrl);
+                let myRow = document.querySelector('.row')
+                let myDive = document.createElement('div');
+                myDive.setAttribute('class' , 'col-lg-3 col-md-6 col-sm-12 imgStyle text-center')
+                let myImg = document.createElement('img');
+                myImg.setAttribute('src' , element.thumbnailUrl);
+                myDive.appendChild(myImg);
+                myRow.appendChild(myDive)
+          }
 
         });
       })
